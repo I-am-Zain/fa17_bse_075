@@ -14,6 +14,7 @@ class _HardDiceState extends State<HardDice> {
   //var random = new Random();
   int randomIntForDiceOne = Random().nextInt(6);
   int randomIntForDiceTwo = Random().nextInt(6);
+   bool _visible=false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,17 +30,22 @@ class _HardDiceState extends State<HardDice> {
             Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
              children: <Widget>[
-               Expanded(child: FlatButton(
+               Expanded(child: RaisedButton(
+                 child: Text('Dice Roll'),
                  onPressed: (){
                    setState(() {
                      changeImage();
-                     diceChoice();
+                     _visible =!_visible;
+                     //diceChoice();
 
                    });
-                 }, child: Image.asset('image/'+imageArray[randomIntForDiceOne], height: 150, width: 150,)
-               ),)
+                 },
+               ),
+               ),
 
-            ],)
+
+            ],),
+            Expanded(child: Visibility(visible: !_visible, child: Image.asset('image/'+imageArray[randomIntForDiceOne], height: 150, width: 150,)))
           ],
         ),
       ),
