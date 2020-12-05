@@ -35,8 +35,10 @@ class _HardDiceState extends State<HardDice> {
                  onPressed: (){
                    setState(() {
                      changeImage();
+
                      _visible =!_visible;
-                     //diceChoice();
+
+                     diceChoice();
 
                    });
                  },
@@ -45,10 +47,22 @@ class _HardDiceState extends State<HardDice> {
 
 
             ],),
-            Expanded(child: Visibility(visible: !_visible, child: Image.asset('image/'+imageArray[randomIntForDiceOne], height: 150, width: 150,)))
+            Expanded(child: Visibility(
+                visible: !_visible,
+                child: Image.asset('image/'+imageArray[randomIntForDiceOne], height: 150, width: 150,)),
+
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 60),
+              child: RaisedButton(onPressed:() {Navigator.pop(context);},
+                child: Text('Exit'),
+              ),
+            )
           ],
+
         ),
       ),
+
     );
   }
   void changeImage() {
@@ -62,5 +76,6 @@ class _HardDiceState extends State<HardDice> {
       Navigator.push(context, new MaterialPageRoute(builder: (context) => new ChoicePage()));
     });
   }
+
 
 }
