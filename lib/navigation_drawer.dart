@@ -73,11 +73,16 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.zero,
           children: [
             UserAccountsDrawerHeader(
+
                 accountName: Text('ZAIN_UL_ABIDEEN'),
                 accountEmail: Text('zaynee.chaudhary@gmail.com'),
-                currentAccountPicture: CircleAvatar(
-                    backgroundImage: AssetImage('image/zain.jpg')
 
+                currentAccountPicture: GestureDetector(
+                  onTap: ()=>_showSecondPage(context),
+                  child: CircleAvatar(
+                      backgroundImage: AssetImage('image/zain.jpg')
+
+                  ),
                 )
             ),
             ListTile(
@@ -115,6 +120,24 @@ class _HomePageState extends State<HomePage> {
       Navigator.push(context, new MaterialPageRoute(builder: (context) => new HardDice()));
     });
   }
+  void _showSecondPage(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => Scaffold(
+          body: Center(
+            child: Hero(
+              tag: 'my-hero-animation-tag',
+              child: Image.asset('image/zain.jpg'),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+
+
+
 }
 
 
