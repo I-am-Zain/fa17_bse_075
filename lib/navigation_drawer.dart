@@ -15,7 +15,58 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: Text('zain'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              children: [
+                Expanded(
+
+                child: Padding(
+                  padding: EdgeInsets.all(15.0),
+                  child: FlatButton(
+                    textColor: Colors.white,
+                    color: Colors.blue[700],
+                    child: Text(
+                      'Simple',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                      ),
+                    ),
+                    onPressed: () {
+                      debugPrint('simple');
+                    },
+                  ),
+                ),
+          ),
+                Expanded(
+
+                  child: Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: FlatButton(
+
+                      textColor: Colors.white,
+                      color: Colors.blue[700],
+                      child: Text(
+                        'Hard',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                      onPressed: () {
+                        debugPrint('hard');
+                      },
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+          ],
+        ),
       ),
       drawer: Drawer(
         child: ListView(
