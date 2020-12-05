@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Image(image: AssetImage('image/zain.jpg'),height: 300,),
             SizedBox(height: 10,),
-            Text('Zain-ul-Abideen', style: TextStyle(fontSize: 20,color: Colors.redAccent),),
+            Text('Zain-ul-Abideen', style: TextStyle(fontSize: 30,color: Colors.redAccent),),
             SizedBox(height: 10,),
             Text('FA17-BSE-075', style: TextStyle(fontSize: 20,color: Colors.redAccent),),
             SizedBox(height: 10,),
