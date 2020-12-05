@@ -18,7 +18,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: 'Dice app',
           home: HomePage(),
           theme: ThemeData(
-              primarySwatch: Colors.purple
+              primarySwatch: Colors.blue,
           ),
 
         ),),));

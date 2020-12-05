@@ -1,4 +1,7 @@
+import 'package:fa17_bse_075/HardPage.dart';
+import 'package:fa17_bse_075/simpleDice.dart';
 import 'package:flutter/material.dart';
+
 class  HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -35,9 +38,7 @@ class _HomePageState extends State<HomePage> {
                         fontSize: 20.0,
                       ),
                     ),
-                    onPressed: () {
-                      debugPrint('simple');
-                    },
+                    onPressed: simpleDice,
                   ),
                 ),
           ),
@@ -56,9 +57,8 @@ class _HomePageState extends State<HomePage> {
                           fontSize: 20.0,
                         ),
                       ),
-                      onPressed: () {
-                        debugPrint('hard');
-                      },
+                      onPressed: hardDice,
+
                     ),
                   ),
                 ),
@@ -104,4 +104,17 @@ class _HomePageState extends State<HomePage> {
 
     );
   }
+  void simpleDice() {
+    setState(() {
+      Navigator.push(context, new MaterialPageRoute(builder: (context) => new SimpleDice()));
+    });
+  }
+
+  void hardDice() {
+    setState(() {
+      Navigator.push(context, new MaterialPageRoute(builder: (context) => new HardDice()));
+    });
+  }
 }
+
+
