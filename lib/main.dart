@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(height: 10,),
             Text('Zain-ul-Abideen', style: TextStyle(fontSize: 30,color: Colors.redAccent),),
             SizedBox(height: 10,),
-            Text('FA17-BSE-075', style: TextStyle(fontSize: 20,color: Colors.redAccent),),
+            Text('FA17-BSE-075', style:  TextStyle(fontSize: 20,color: Colors.redAccent),),
             SizedBox(height: 10,),
 
           ],
